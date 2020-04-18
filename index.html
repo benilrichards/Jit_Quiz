@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+  <title>Document</title>
+</head>
+<body style="background-image: url('/img/jit.jpg');">
+  <div id="header"></div>
+  <div id="pledge">
+    <div class="form">
+      <img src="img/jit logo.png" width="90px" height="100px" alt="">
+      <br/><h1> JEPPIAAR INSTITUTE OF TECHNOLOGY</h1><br/><br/>
+      <h4>I shall abide by <strong>#JantaCurfew</strong> and follow all directions given by Government of India to control the spread of Corona Virus</h4><br/>
+      <div class="button">
+        <button id="but" type="submit" onclick="window.location='pages/questions.html'">Pledge and continue...</button>   <!--onclick="totalSum()            //for display mark here"--> 
+      </div>
+    </div>
+  </div>
+  <!-- <div id="Container"></div> -->
+
+  <div class="footer" id="foot">
+    with <spanid="heart" class="fa fa-heart"></span> Benil Richards R
+  </div>
+
+</body>
+</html>
+
+<script>
+  
+  $(document).ready(function() {
+  $("#header").load("pages/questions.html #header")
+  // $("#refresh").click(function() {
+    // $(this).parent().parent().remove();                //remove div
+    // $("#Container").load("questions.html #question");  //replace div
+    // return false;
+    // });
+  });
+  
+</script>
+
+
+
+<style>
+  html, body {
+  opacity: .85;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+/* .form{
+  overflow: auto;
+  padding-bottom: 70px;
+} */
+
+
+</style>

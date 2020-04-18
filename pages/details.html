@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+  <title>JITCORVIDQUIZ</title>
+</head>
+<body style="background-image: url('/img/Jeppiaar-Academy_white-logo-01-1.png'); background-color: black; background-size: contain;">
+
+  <div id="container">
+
+  <div id="header">
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" class="nav-text" href="http://www.jeppiaarinstitute.org">
+        <img src="img/jit logo.png" width="40" height="50" class="d-inline-block align-top" alt="">
+        JIT COVID QUIZ
+      </a>
+    </nav>
+  </div>
+
+  <div class="form">
+    <h4>You have scored <span id=query>mark</span> out of 10.<br/>Your certificates will be sent to you by mail. <br/>Please enter your details below.</h4>
+  </div>
+
+  <div class="form" id="delete">
+    <form id="submit-to-google-sheet">
+  
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Full Name" required/>
+      </div>
+    
+      <div>
+        <label>E-Mail</label>
+        <input type="email" name="email" placeholder="Email address" required/>
+      </div>
+      
+      <div>
+        <label>Mobile Number</label>
+        <input type="text" name="mobile_number" placeholder="Mobile Number" maxlength="10" required/>
+      </div>
+      
+      <div>
+        <label>School/College Name</label>
+        <input type="text" name="School_college" placeholder="School/College Name" required/>
+      </div>
+
+      <div>
+        <label>Class/Year</label>
+        <input type="text" name="class_year" placeholder="Class/Year" required/>
+      </div>
+
+      <div>
+        <label>Department</label>
+        <input type="text" name="department" placeholder="Department (If College)"/>
+      </div>
+    
+      <div>
+        <button type="submit" id="submit-form">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="hidden" class="form">
+    <br/><h4>Thankyou for your submission...<h4><br/><br/><br/>
+  </div>
+
+  <div class="footer">
+    With <span id="heart" class="fa fa-heart"></span> Benil Richards R
+  </div>
+  
+</div>
+</body>
+</html>
+
+<script>
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwg98RSD3Hm8H3N_AdVXi4lN8BVoDiL0P9nRh9ASl-CL9GgO4Q/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', event => {
+    event.preventDefault()
+    fetch(scriptURL, { method: 'POST', mode: "no-cors", body: new FormData(form)})
+    .then(
+      response => console.log('Success!', response)
+    )
+    .catch(
+      error => console.error('Error!', error.message)
+    )
+
+    showme()
+
+  });
+
+  var divId = "header";
+  jQuery(divId).ready(function() {
+    let spn = document.querySelector('#query');
+    let mark = document.location.search.replace(/^.*?\=/,'');
+    spn.innerHTML = mark;  
+  });
+
+  function showme(){
+    $('#hidden').show(); 
+    $('#delete').remove();
+  }
+
+</script>
+
+<style>
+  label{
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 0px;
+  }
+</style>

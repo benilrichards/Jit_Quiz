@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <title>JITCORVIDQUIZ</title>
+</head>
+<body style="background-image: url('/img/covid.jpg');">
+
+  <div id="container">
+
+  <div id="header">
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" class="nav-text" href="http://www.jeppiaarinstitute.org">
+        <img src="img/Jeppiaar-Academy_white-logo-01-1.png" width="40" height="50" class="d-inline-block align-top" alt="">
+        JIT COVID QUIZ
+      </a>
+    </nav>
+  </div>
+  
+  <div class="question" id="question">
+    <form id="redirect">
+
+      <strong>1. How does Coronavirus transmit?</strong>
+      
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q11" value="option1" onclick="falseAns(0)"/>
+          <label lass="form-check-label" for="q11">
+            <strong>A.</strong> When a person sneezes or cough, droplets spread in the air or fall on the ground and nearby surfaces.
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q12" value="option2" onclick="falseAns(0)"/>
+          <label class="form-check-label" for="q12">
+            <strong>B.</strong> If another person is nearby and inhales the droplets or touches these surfaces and further touches his face, eyes or mouth, he or she can get an infection.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q13" value="option3" onclick="falseAns(0)"/>
+          <label class="form-check-label" for="q13">
+            <strong>C.</strong> If the distance is less than 1 meter from the infected person.
+          </label> 
+        </div> 
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" id="q14" value="option4" onclick="trueAns(0)"/>
+          <label class="form-check-label" for="q14">
+            <strong>D.</strong> All the above are correct.
+          </label>
+        </div>
+      </div>
+
+      <strong>2. What happens to a person suffering from COVID-19?</strong>
+      
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q21" value="option1" onclick="falseAns(1)"/>
+          <label class="form-check-label" for="q21">
+            <strong>A.</strong> Around 80% of the people will require no treatment as such and will recover on their own.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q22" value="option2" onclick="falseAns(1)"/>
+          <label class="form-check-label" for="q22">
+            <strong>B.</strong> Around less than 20% or a small proportion may need hospitalisation.
+           </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q23" value="option3" onclick="falseAns(1)"/>
+          <label class="form-check-label" for="q23">
+            <strong>C.</strong> A very small proportion basically suffering from chronic illness may need admission in an Intensive Care Unit (ICU).
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" id="q24" value="option4" onclick="trueAns(1)"/>
+          <label class="form-check-label" for="q24">
+            <strong>D.</strong> All the above are correct.
+          </label>
+        </div>
+      </div>
+
+      <strong>3. In which age group the COVID-19 spreads?</strong>
+
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q31" value="option1" onclick="falseAns(2)"/>
+          <label class="form-check-label" for="q31">
+            <strong>A.</strong> COVID-19 occur in all age groups.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q32" value="option2" onclick="falseAns(2)"/>
+          <label class="form-check-label" for="q32">
+            <strong>B.</strong> Coronavirus infection is mild in children.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q33" value="option3" onclick="falseAns(2)"/>
+          <label class="form-check-label" for="q33">
+            <strong>C.</strong> Older person and persons with pre-existing medical conditions are at high risk to develop serious illness.
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" id="q34" value="option4" onclick="trueAns(2)"/>
+          <label class="form-check-label" for="q34">
+            <strong>D.</strong> All the above are correct.
+          </label>
+        </div>
+      </div>
+      
+      <strong>4. What is Coronavirus?</strong>
+      
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q41" value="option1" onclick="falseAns(3)"/>
+          <label class="form-check-label" for="q41">
+            <strong>A.</strong> It is a large family of viruses.
+          </label>
+        </div>
+          
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q42" value="option2" onclick="falseAns(3)"/>
+          <label class="form-check-label" for="q42">
+            <strong>B.</strong> It belongs to the family of Nidovirus.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q43" value="option3" onclick="trueAns(3)"/>
+          <label class="form-check-label" for="q43">
+            <strong>C.</strong> Both A and B are correct.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" id="q44" value="option4" onclick="falseAns(3)"/>
+          <label class="form-check-label" for="q44">
+            <strong>D.</strong> Only A is correct.
+          </label>
+        </div>
+      </div>
+
+      <strong>5. World Health Organisation on 11 February, 2020 announced an official name for the disease that is causing the 2019 novel coronavirus outbreak? What is the new name of the disease?</strong>
+      
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q51" value="option1" onclick="trueAns(4)"/>
+          <label class="form-check-label" for="q51">
+            <strong>A.</strong> COVID-19
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q52" value="option2" onclick="falseAns(4)"/>
+          <label class="form-check-label" for="q52">
+            <strong>B.</strong> CORVD-19
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q53" value="option3" onclick="falseAns(4)"/>
+          <label class="form-check-label" for="q53">
+            <strong>C.</strong> CONVID-19
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" id="q54" value="option4" onclick="falseAns(4)"/>
+          <label class="form-check-label" for="q54">
+            <strong>D.</strong> CORVID-19
+          </label>
+        </div>
+      </div>
+
+      <strong>6. The first case of novel coronavirus was identified in _________.</strong>
+
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q6" id="q61" value="option1" onclick="falseAns(5)"/>
+          <label class="form-check-label" for="q61">
+            <strong>A.</strong> Beijing
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q6" id="q62" value="option2" onclick="falseAns(5)"/>
+          <label class="form-check-label" for="q62">
+            <strong>B.</strong> Shanghai
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q6" id="q63" value="option3" onclick="trueAns(5)"/>
+          <label class="form-check-label" for="q63">
+            <strong>C.</strong> Wuhan
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q6" id="q64" value="option4" onclick="falseAns(5)"/>
+          <label class="form-check-label" for="q64">
+            <strong>D.</strong> Tianjin
+          </label>
+        </div>
+      </div>
+
+      <strong>7. Which of the following diseases are related to coronavirus?</strong>
+      
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q7" id="q71" value="option1" onclick="falseAns(6)"/>
+          <label class="form-check-label" for="q71">
+            <strong>A.</strong> MERS
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q7" id="q72" value="option2" onclick="falseAns(6)"/>
+          <label class="form-check-label" for="q72">
+            <strong>B.</strong> SARS
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q7" id="q73" value="option3" onclick="trueAns(6)"/>
+          <label class="form-check-label" for="q73">
+            <strong>C.</strong> Both A and B are correct.
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q7" id="q74" value="option4" onclick="falseAns(6)"/>
+          <label class="form-check-label" for="q74">
+            <strong>D.</strong> Neither A nor B are correct.
+          </label>
+        </div>
+      </div>
+
+      <strong>8. Mild Symptoms of Novel coronavirus are:</strong>
+
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q8" id="q81" value="option1" onclick="falseAns(7)"/>
+          <label class="form-check-label" for="q81">
+            <strong>A.</strong> Fever
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q8" id="q82" value="option2" onclick="falseAns(7)"/>
+          <label class="form-check-label" for="q82">
+            <strong>B.</strong> Cough
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q8" id="q83" value="option3" onclick="falseAns(7)"/>
+          <label class="form-check-label" for="q83">
+            <strong>C.</strong> Shortness of breath.
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q8" id="q84" value="option4" onclick="trueAns(7)"/>
+          <label class="form-check-label" for="q84">
+            <strong>D.</strong> All the above are correct.
+          </label>
+        </div>
+      </div>
+
+      <strong>9. From where coronavirus got its name?</strong>
+
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q9" id="q91" value="option1" onclick="trueAns(8)"/>
+          <label class="form-check-label" for="q91">
+            <strong>A.</strong> Due to their crown-like projections.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q9" id="q92" value="option2" onclick="falseAns(8)"/>
+          <label class="form-check-label" for="q92">
+            <strong>B.</strong> Due to their leaf-like projections.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q9" id="q93" value="option3" onclick="falseAns(8)"/>
+          <label class="form-check-label" for="q93">
+            <strong>C.</strong> Due to their surface structure of bricks.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q9" id="q94" value="option4" onclick="falseAns(8)"/>
+          <label class="form-check-label" for="q94">
+            <strong>D.</strong> None of the above.
+          </label>
+        </div>
+      </div>
+
+      <strong>10. What are the precautions that need to be taken to protect from the coronavirus?</strong>
+
+      <div class="q">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q10" id="q101" value="option1" onclick="trueAns(9)"/>
+          <label class="form-check-label" for="q101">
+            <strong>A.</strong> Cover your nose and mouth when sneezing.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q10" id="q102" value="option2" onclick="falseAns(9)"/>
+          <label class="form-check-label" for="q102">
+            <strong>B.</strong> Add more garlic into your diet.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q10" id="q103" value="option3" onclick="falseAns(9)"/>
+          <label class="form-check-label" for="q103">
+            <strong>C.</strong> Visit your doctor for antibiotics treatment.
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q10" id="q104" value="option4" onclick="falseAns(9)"/>
+          <label class="form-check-label" for="q104">
+            <strong>D.</strong> Wash your hands after every hour.
+          </label>
+        </div>
+      </div>
+
+      <div class="button">
+        <button type="submit" id="submit-form" ">Submit</button>   <!--onclick="totalSum()            //for display mark here"--> 
+      </div>
+
+      <!-- <span id="sc"></span> -->
+    </form>
+  </div>
+
+  <div class="footer" id="footer">
+    with <spanid="heart" class="fa fa-heart"></span> Benil Richards R
+  </div>
+  
+  </div>
+</body>
+</html>
+
+
+<script>
+  const scriptURL = 'details.html'
+  const form = document.forms['redirect']
+
+  var points = 0;
+  // var answers = []; //Dynamic array.
+
+  // function trueAns(q) { //q==qestion.
+  //   if(answers[q] != 1) {
+  //     points += 1; //Only + will not change the score because It's adding without putting. But here we have both adding && putting. 
+  //     answers[q] = 1;
+  //   }
+  // }
+
+  // function falseAns(q) {
+  //   if(answers[q] == 1){
+  //     points -= 1;
+  //     answers[q] = -1;
+  //   }
+  // }
+
+  // function totalSum() {                                              //display mark function
+  //   document.querySelector("#sc").innerHTML = points;
+  // }
+
+  $('#submit-form').click(function(){
+    event.preventDefault()
+    
+    if (!$("input[name='q1']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q2']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q2']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q4']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q5']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q6']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q7']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q8']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q9']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else if (!$("input[name='q10']:checked").val()) {
+      alert('Please answer all the question');
+      return false;
+    }
+
+    else{
+
+      if ($("input[id='q14']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q24']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q34']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q43']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q51']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q63']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q73']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q84']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q91']:checked").val()){
+        points +=1
+      }
+      
+      if ($("input[id='q101']:checked").val()){
+        points +=1
+      }
+      
+      window.location=scriptURL+"?m="+points;
+    
+    }
+ 
+  })
+
+
+  // function calling(){
+  //   for(var i=1; i<=10; i++){
+  //     var name = document.getElementsByName('q'+i).checked;
+  //     function call(name)
+  //   }
+  // }
+
+  //   function call(name){
+  //     if(name==false){
+  //       alert('Please answer all the question');
+  //       return false;      
+  //     }
+  //   }
+
+
+  // form.addEventListener('submit', event => {
+  //   event.preventDefault()
+  //   window.location=scriptURL+"?m="+points;
+  // })
+  
+</script>

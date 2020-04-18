@@ -1,0 +1,185 @@
+body {
+  opacity: 0.93;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#header{
+  margin-bottom: 20px;
+}
+
+#pledge{
+  min-height: 72%;
+}
+
+@media screen and (max-width:1250px) {
+  #pledge{
+    min-height: 68%;
+  }
+}
+
+#foot{
+  margin-top: 50px;
+  position: relative;
+  background-color: black;
+  height: 70px;
+  clear: both;
+}
+
+.form, .question {
+  text-align: center;
+  margin: 25px 20%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 60%;
+}
+
+.question{
+  padding: 40px;
+  text-align: left;
+}
+
+@media screen and (max-width:800px){
+  .form, .question {
+    text-align: center;
+    margin: 15px 10%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .question {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width:450px){
+  .form, .question {
+    text-align: center;
+    margin: 15px 5%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:450px){
+  .question {
+    text-align: left;
+  }
+}
+
+input[type=radio]{
+  margin-top: 6px;
+}
+
+input[type=text], input[type=email], input[type=number] {
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button{
+  text-align: center;
+}
+
+@media screen and (max-width:1000px) {
+  #but {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:540px) {
+  #but {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:340px) {
+  #but {
+    width: 70%;
+  }
+}
+
+button[type=submit] {
+  text-align: center;
+  width: 30%;
+  background-color: #0099ff;
+  color: white;
+  padding: 14px 0px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #003d66;
+
+}
+
+h1,h4{
+  text-align: center;
+  color: black;
+}
+
+.navbar-brand{
+  font-size: 1.8rem;
+}
+
+.footer{
+  margin-top: 50px;
+  padding: 25px 0px;
+  background-color: #f8f9fa;
+  color: grey;
+  width: 100%;
+}
+
+#footer{
+  background-color: #343a40;
+  color: grey ;
+}
+
+.q{
+  padding: 0px 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+input[type=radio] {
+  padding-right: 50px;
+}
+
+#hidden{
+  display: none;
+  color: black;
+  margin-bottom: 15%;
+}
+
+@media screen and (max-width:1100px){
+  #hidden{
+    margin-bottom: 14%;
+  }
+}
+
+@media screen and (max-width:800px){
+  #hidden{
+    margin-bottom: 20%;
+  }
+}
+
+#heart{
+  color: red;
+}
